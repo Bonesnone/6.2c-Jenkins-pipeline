@@ -7,19 +7,24 @@ pipeline {
         DIRECTORY_PATH='DIRECTORY_PATH'
     }
     stages {
-        stage('Build') {
+        stage('1: Build') {
             steps {
                 echo 'Fetch the source code from the directory path specified by the environment variable'
                 echo 'Compile the code and generate any necessary artifacts'
             }
         }
-        stage('Test') {
+        stage('2: Unit and Integration Tests') {
             steps {
                 echo 'Unit tests'
                 echo 'Integration tests'
             }
         }
-        stage('Quality Check') {
+        stage('3: Code Analysis') {
+            steps {
+                echo 'Ensure code meets industry standards'
+            }
+        }
+        stage('4: Security Scan') {
             steps {
                 echo 'Check the quality of the code'
             }
