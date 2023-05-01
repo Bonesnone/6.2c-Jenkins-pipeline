@@ -29,18 +29,18 @@ pipeline {
                 echo 'Check the quality of the code'
             }
         }
-        stage('Deploy') {
+        stage('5: Deploy to staging server') {
             steps {
                 echo 'Deploy the application to a testing environment specified by the environment variable'
             }
         }
-        stage('Approval') {
+        stage('6. Staging integration tests') {
             steps {
                 echo "waiting for approval of ${NAME}.."
                 sleep 10
             }
         }
-        stage('Deploy to Production') {
+        stage('7. Deploy to production') {
             steps {
                 echo 'Testing environment:'
                 echo "${TESTING_ENVIRONMENT}"
