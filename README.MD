@@ -13,7 +13,7 @@ Once you have a Jenkins build server running, install the following plugins:<br 
 
 With all of these installed, enable and restart. Copy this git repository SCM to replicate the Jenkinsfile, and ensure JMeter is located within the Jenkins working folder. By default, this directory is:<br />
 `/usr/share/jenkins/` and `/usr/lib/jenkins/` on Linux<br />
-`C:\Users\Jenkins\AppData\Local\Jenkins` on windows.<br />
+`C:\Users\Jenkins\AppData\Local\Jenkins` on Windows<br />
 Now you're ready to start development!
 
 ### Project Structure
