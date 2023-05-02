@@ -5,12 +5,15 @@ Requires Docker and JMeter installed on both developer and Jenkins server
 
 ### Setting up your own Jenkins server
 Once you have a Jenkins build server running, install the following plugins:
-(Build tools) Maven
-(Unit and integration test) Performance plugin (to interface with JMeter)
-(Code analysis) Fortify
-(Security analysis) SNYK
-(Deployment) Docker
-With all of these installed, enable and restart. Copy the git repository SCM to replicate the Jenkinsfile, and you're ready to start development!
+(Build tools) Maven<br />
+(Unit and integration test) Performance plugin (to interface with JMeter)<br />
+(Code analysis) Fortify<br />
+(Security analysis) SNYK<br />
+(Deployment) Docker<br />
+With all of these installed, enable and restart. Copy this git repository SCM to replicate the Jenkinsfile, and ensure JMeter is located within the Jenkins working folder. By default, this directory is:<br />
+`/usr/share/jenkins/ and /usr/lib/jenkins/` on Linux
+`C:\Users\Jenkins\AppData\Local\Jenkins` on windows.
+Now you're ready to start development!
 
 ### Project Structure
 Below is the current high-level structure of the front-end of the project.
