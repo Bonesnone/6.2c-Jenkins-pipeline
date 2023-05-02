@@ -2,9 +2,8 @@ pipeline {
     agent any
     environment {
         NAME='Jye'
-        TESTING_ENVIRONMENT='TESTING_ENVIRONMENT'
-        PRODUCTION_ENVIRONMENT='PRODUCTION_ENVIRONMENT'
-        DIRECTORY_PATH='DIRECTORY_PATH'
+        WINDOWS_DIRECTORY_PATH='TESTING_ENVIRONMENT'
+        LINUX_DIRECTORY_PATH='PRODUCTION_ENVIRONMENT'
     }
     stages {
         stage('1: Build') {
