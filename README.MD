@@ -4,7 +4,7 @@ This was created by Jye Floreani for the SIT223 6.1p github/jenkins integration 
 Requires Docker and JMeter installed on both developer and Jenkins machines
 
 ### Setting up your own Jenkins server
-Once you have a Jenkins build server running, install the following plugins:
+Once you have a Jenkins build server running, install the following plugins:<br />
 (Build tools) Maven<br />
 (Unit and integration test) Performance plugin (to interface with JMeter)<br />
 (Code analysis) Fortify<br />
