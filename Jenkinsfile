@@ -1,15 +1,19 @@
 pipeline {
     agent any
     environment {
-        NAME='Jye'
-        WINDOWS_DIRECTORY_PATH='TESTING_ENVIRONMENT'
-        LINUX_DIRECTORY_PATH='PRODUCTION_ENVIRONMENT'
+        AGENT_NAME='Jye'
+        PROJECT_NAME='6.2c-Jenkins-pipeline'
+        LINUX_DIRECTORY_PATH='/usr/lib/jenkins/'
+        WINDOWS_DIRECTORY_PATH='C:\Users\Jenkins\AppData\Local\Jenkins'
+        SNYK_NAME='Snyk-test-6.2c'
+        SNYK_TOKEN='15a91d71-3e72-4997-ae13-f0705c310275'
     }
     stages {
         stage('1: Build') {
             steps {
                 echo 'Fetch the source code from the directory path specified by the environment variable'
                 echo 'Compile the code and generate any necessary artifacts'
+                
             }
         }
         stage('2: Unit and Integration Tests') {
@@ -25,18 +29,22 @@ pipeline {
         }
         stage('4: Security Scan') {
             steps {
-                echo 'Check the quality of the code'
+                snykSecurity(
+                    snkyInstallation: "<%{SNYK_NAME}>",
+                    snykTokenID: '<%{SNYK_TOKEN}>',
+                    projectName: '%{PROJECT_NAME}'
             }
         }
         stage('5: Deploy to staging server') {
             steps {
-                echo 'Deploy the application to a testing environment specified by the environment variable'
+                echo "waiting for approval of ${AGENT_NAME}.."
+                sleep 3
             }
         }
         stage('6. Staging integration tests') {
             steps {
-                echo "waiting for approval of ${NAME}.."
-                sleep 10
+                echo "Reapplying checks with security measures."
+                sleep 3
             }
         }
         stage('7. Deploy to production') {
@@ -45,8 +53,6 @@ pipeline {
                 echo "${TESTING_ENVIRONMENT}"
                 echo 'Production environment:'
                 echo "${PRODUCTION_ENVIRONMENT}"
-                echo 'Directory path:'
-                echo "${DIRECTORY_PATH}"
                 echo 'Finished!'
             }
         }
