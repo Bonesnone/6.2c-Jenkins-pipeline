@@ -16,7 +16,7 @@ With all of these installed, enable and restart. Copy this git repository SCM to
 Now you're ready to start development!
 
 ### Project Structure
-Below is the current high-level structure of the front-end of the project.
+Below is the current high-level structure of the project.
 
 `public` – Public web documents including the index.html and other base html documents.<br />
 `src` – Java(script) objects that need to be referenced internally.<br />
