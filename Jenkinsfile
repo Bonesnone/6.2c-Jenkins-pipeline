@@ -32,7 +32,8 @@ pipeline {
                 snykSecurity(
                     snkyInstallation: "<%{SNYK_NAME}>",
                     snykTokenID: '<%{SNYK_TOKEN}>',
-                    projectName: '%{PROJECT_NAME}'
+                    projectName: '%{PROJECT_NAME}',
+                    failOnError
             }
         }
         stage('5: Deploy to staging server') {
