@@ -8,7 +8,7 @@ pipeline {
         AGENT_NAME='Jye'
         PROJECT_NAME='6.2c-Jenkins-pipeline'
         LINUX_DIRECTORY_PATH='/usr/lib/jenkins/'
-        WINDOWS_DIRECTORY_PATH='C:\Users\Jenkins\AppData\Local\Jenkins'
+        WINDOWS_DIRECTORY_PATH='C:\\Users\\Jenkins\\AppData\\Local\\Jenkins'
         SNYK_NAME='Snyk-test-6.2c'
         SNYK_TOKEN='15a91d71-3e72-4997-ae13-f0705c310275'
     }
