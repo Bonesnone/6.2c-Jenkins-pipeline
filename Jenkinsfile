@@ -45,6 +45,7 @@ pipeline {
                 }
                 echo JENKINS_HOME
                 echo JENKINS_EXTENSION
+                echo "test"
             }
         }
         stage('2: Unit and Integration Tests') {
