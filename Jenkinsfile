@@ -45,7 +45,6 @@ pipeline {
                 }
                 echo JENKINS_HOME
                 echo JENKINS_EXTENSION
-                echo "test"
             }
         }
         stage('2: Unit and Integration Tests') {
@@ -118,8 +117,6 @@ pipeline {
         }
         stage('5: Deploy to staging server') {
             steps {
-                echo "waiting for approval of ${AGENT_NAME}.."
-                sleep 3
                 echo 'uploading to dockerhub testing environment:'
                 echo "${TESTING_ENVIRONMENT}"
             }
@@ -139,6 +136,8 @@ pipeline {
         }
         stage('7. Deploy to production') {
             steps {
+                echo "waiting for approval of ${AGENT_NAME}.."
+                sleep 3
                 echo 'Production environment:'
                 echo "${PRODUCTION_ENVIRONMENT}"
                 echo 'Finished!'
