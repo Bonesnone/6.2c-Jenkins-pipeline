@@ -1,4 +1,4 @@
-This was created by Jye Floreani for the SIT223 6.1p github/jenkins integration project
+This was created by Jye Floreani for the SIT223 6.2c github/jenkins pipeline integration and emailing project
 
 ### Requirements
 Requires Docker and JMeter installed on both developer and Jenkins machines
