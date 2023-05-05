@@ -42,9 +42,9 @@ pipeline {
                         echo 'something went wrong! OPERATING_SYSTEM was not detected.'
                         echo 'Maybe try manually setting your OPSYS variable?'
                     }
-                    echo JENKINS_HOME
-                    echo JENKINS_EXTENSION
                 }
+                echo JENKINS_HOME
+                echo JENKINS_EXTENSION
             }
         }
         stage('2: Unit and Integration Tests') {
