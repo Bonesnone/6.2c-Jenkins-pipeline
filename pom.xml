@@ -1,7 +1,0 @@
-    <project>
-      <modelVersion>4.0.0</modelVersion>
-     
-      <groupId>com.mycompany.app</groupId>
-      <artifactId>6.2c-Jenkins-pipeline</artifactId>
-      <version>1</version>
-    </project>
