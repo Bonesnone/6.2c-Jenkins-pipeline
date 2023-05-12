@@ -65,10 +65,10 @@ pipeline {
             post {
                 success {
                     script {
-                        mail to: "s222134604@gmail.com",
-                        subject: "Build status successful!",
-                        body: "Congratulations, build ${BUILD_NUMBER} has passed testing inspection."
-                        attachLog: True
+                        emailext attachLog: true,
+                        body: "Congratulations, build ${BUILD_NUMBER} has passed U&I testing.",
+                        subject: 'Build success',
+                        to: 's222134604@gmail.com'
                     }
                     echo 'success! email sent.'
                 }
@@ -108,10 +108,10 @@ pipeline {
             post {
                 success {
                     script {
-                        mail to: "s222134604@gmail.com",
-                        subject: "Build status successful!",
-                        body: "Congratulations, build ${BUILD_NUMBER} has passed security requirements."
-                        attachLog: True
+                        emailext attachLog: true,
+                        body: "Congratulations, build ${BUILD_NUMBER} has passed security inspection.",
+                        subject: 'Build success',
+                        to: 's222134604@gmail.com'
                     }
                     echo 'success! email sent.'
                 }
