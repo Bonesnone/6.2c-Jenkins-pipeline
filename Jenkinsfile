@@ -68,6 +68,7 @@ pipeline {
                         mail to: "s222134604@gmail.com",
                         subject: "Build status successful!",
                         body: "Congratulations, build ${BUILD_NUMBER} has passed testing inspection."
+                        attachLog: True
                     }
                     echo 'success! email sent.'
                 }
@@ -110,6 +111,7 @@ pipeline {
                         mail to: "s222134604@gmail.com",
                         subject: "Build status successful!",
                         body: "Congratulations, build ${BUILD_NUMBER} has passed security requirements."
+                        attachLog: True
                     }
                     echo 'success! email sent.'
                 }
